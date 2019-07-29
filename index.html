@@ -18,18 +18,6 @@
 </html>
 
 <script>
-  time.forEach(function(item) {
-  	dateRange = Object.values(item)[0]
-  	startDate = dateRange[0]
-  	endDate = dateRange[1]
-  	currentDate = new Date()
-	console.log("Today is " + currentDate)
-  	city = Object.keys(item)[0]
-
-  	if (currentDate > startDate && currentDate < endDate) {
-		document.getElementById("location").innerHTML = city;
-    	}
-  })
 
   time = [
     {
@@ -49,4 +37,17 @@
       ]
     }
   ]
+
+  time.forEach(function(item) {
+  	dateRange = Object.values(item)[0]
+  	startDate = dateRange[0]
+  	endDate = dateRange[1]
+  	currentDate = new Date()
+	console.log("Today is " + currentDate + "!")
+  	city = Object.keys(item)[0]
+
+  	if (currentDate > startDate && currentDate < endDate) {
+		document.getElementById("location").innerHTML = city;
+    	}
+  })
 </script>
