@@ -39,15 +39,16 @@
   ]
 
   time.forEach(function(item) {
-  	dateRange = Object.values(item)[0]
-  	startDate = dateRange[0]
-  	endDate = dateRange[1]
-  	currentDate = new Date()
-	console.log("Today is " + currentDate + "!")
-  	city = Object.keys(item)[0]
+    dateRange = Object.values(item)[0]
+    startDate = dateRange[0]
+    endDate = dateRange[1]
+    currentDate = new Date()
+    console.log("Today is " + currentDate + "!")
+    city = Object.keys(item)[0]
 
-  	if (currentDate > startDate && currentDate < endDate) {
-		document.getElementById("location").innerHTML = city;
-    	}
+    if (currentDate > startDate && currentDate < endDate) {
+      document.getElementById("location").innerHTML = city;
+      document.querySelector('meta[name="og:description"]').setAttribute("content", city);
+    }
   })
 </script>
