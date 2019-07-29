@@ -3,7 +3,7 @@
   <head>
     <title>Where is Kelsey?</title>
     <meta property="og:title" content="Where is Kelsey? 🔎">
-    <meta property="og:description" content="Austin">
+    <meta property="og:description" content="Who knows!?">
     <meta property="og:image" content="http://whereiskelsey.com/waldo.png">
     <meta property="og:url" content="http://whereiskelsey.com">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -48,7 +48,7 @@
 
     if (currentDate > startDate && currentDate < endDate) {
       document.getElementById("location").innerHTML = city;
-      document.querySelector('meta[name="og:description"]').setAttribute("content", city);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", city);
     }
   })
 </script>
