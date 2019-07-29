@@ -18,5 +18,34 @@
 </html>
 
 <script>
-  document.getElementById("location").innerHTML = "Hello JavaScript!";
+  time.forEach(function(item) {
+	  dateRange = Object.values(item)[0]
+	  startDate = dateRange[0]
+	  endDate = dateRange[1]
+	  currentDate = new Date()
+	  city = Object.keys(item)[0]
+	
+	  if (currentDate > startDate && currentDate < endDate) {
+		  document.getElementById("location").innerHTML = city;
+    }
+  })
+
+  time = [
+    {
+      "Austin, TX": [
+        new Date("2019-7-26"), 
+        new Date("2019-8-14")
+      ]
+    }, {
+      "Grand Rapids, Michigan": [
+        new Date("2109-8-14"), 
+        new Date("2019-8-18")
+      ]
+    }, {
+      "Austin, TX": [
+        new Date("2019-8-18"), 
+        new Date("2019-8-30")
+      ]
+    }
+  ]
 </script>
